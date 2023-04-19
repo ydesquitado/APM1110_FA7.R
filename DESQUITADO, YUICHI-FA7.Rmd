@@ -5,7 +5,7 @@ date: "2023-04-19"
 output: html_document
 ---
 
-Link for GitHub: [Click Here]()
+***Link for GitHub: [https://github.com/ydesquitado/APM1110_FA7.R](https://github.com/ydesquitado/APM1110_FA7.R)***
 
 # Exercise 15.1 
 
@@ -16,7 +16,28 @@ Link for GitHub: [Click Here]()
 
 ```{r}
 
+#For Letter A
 
+minLength <- 2 #Shortest possible length
+maxLength <- 12 #Longest possible length
+totalLength <- 12 - 2 #Total length accounted for the problem
+scrappedLength <- 12 - 10 #Portion of length that will be scrapped
+scrappedProb <- scrappedLength/totalLength #Probability of a it being scrapped
+scrappedProb #Answer for letter A
+
+#For Letter B
+
+runs <- 50 #Number of simulations
+sims <- runif(50, 2, 12) #Simulation of production of 50 sticks ranging from 2mm to 12mm
+hist(sims,
+     breaks = 10,
+     xlab = "Length of Sticks",
+     ylab = "Frequency of lengths",
+     col = "light pink")
+simsMean <- mean(sims) #Average of the sims
+simsMean
+simsVar <- var(sims) #Variance of the sims
+simsVar
 
 ```
 
